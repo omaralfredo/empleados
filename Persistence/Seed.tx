@@ -1,0 +1,939 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Domain;
+using Microsoft.AspNetCore.Identity;
+
+namespace Persistence
+{
+    public class Seed
+    {
+        public static async Task SeedData(DataContext context)
+        
+        {
+            await SeedData_Autor(context);
+            await SeedData_Categoria(context);
+            await SeedData_Libro(context);
+            await SeedData_Tipo(context);
+        }
+
+         public static async Task SeedData_Autor(DataContext context)
+        {
+            if (context.Autor.Any()) return;
+
+            var Autor = new List<Autor>
+                {
+
+                    new Autor
+                    {
+                    Id_Autor = "AE01",
+                    Nombre = "Cruz, Rafael",
+                    },
+                    new Autor
+                    {
+                    Id_Autor = "AE02",
+                    Nombre = "López García, Ángel",
+                    },
+                    new Autor
+                    {
+                    Id_Autor = "AE03",
+                    Nombre = "Sempere y Guarinos, Juan",
+                    },
+                    new Autor
+                    {
+                    Id_Autor = "AE04",
+                    Nombre = "VV.AA.",
+                    },
+                    new Autor
+                    {
+                    Id_Autor = "AE05",
+                    Nombre = "Martín Jiménez, Alfonso",
+                    },
+                    new Autor
+                    {
+                    Id_Autor = "AE06",
+                    Nombre = "Caireles",
+                    },
+                    new Autor
+                    {
+                    Id_Autor = "AE07",
+                    Nombre = "Ujaldón, Enrique",
+                    },
+                    new Autor
+                    {
+                    Id_Autor = "AE08",
+                    Nombre = "Forner, Salvador (Ed.)",
+                    },
+                    new Autor
+                    {
+                    Id_Autor = "AE09",
+                    Nombre = "Comellas García-Llera, José Luis",
+                    },
+                    new Autor
+                    {
+                    Id_Autor = "AE10",
+                    Nombre = "Prieto, Indalecio; Cárdenas, Lázaro",
+                    },
+                    new Autor
+                    {
+                    Id_Autor = "AE11",
+                    Nombre = "Castells, Luis",
+                    },
+                    new Autor
+                    {
+                    Id_Autor = "NI01",
+                    Nombre = "VV.AA.",
+                    },
+                    new Autor
+                    {
+                    Id_Autor = "NI02",
+                    Nombre = "Díaz, Susana",
+                    },
+                    new Autor
+                    {
+                    Id_Autor = "NI03",
+                    Nombre = "Media-Luna, Paco",
+                    },
+                    new Autor
+                    {
+                    Id_Autor = "NI04",
+                    Nombre = "Alía Miranda. Francisco",
+                    },
+                    new Autor
+                    {
+                    Id_Autor = "NI05",
+                    Nombre = "Sanz Rozalén, Vicent; Piqueras Arenas, José A.",
+                    },
+                    new Autor
+                    {
+                    Id_Autor = "NI06",
+                    Nombre = "Capellán de Miguel, Gonzalo",
+                    },
+                    new Autor
+                    {
+                    Id_Autor = "NI07",
+                    Nombre = "Garrido Ardila, Juan Antonio",
+                    },
+                    new Autor
+                    {
+                    Id_Autor = "NI08",
+                    Nombre = "Delgado Fernández, Santiago; Sánchez Millas, Pilar",
+                    },
+                    new Autor
+                    {
+                    Id_Autor = "NI09",
+                    Nombre = "Moradiellos García, Enrique",
+                    },
+                  
+                };  
+                    await context.Autor.AddRangeAsync(Autor);
+                    await context.SaveChangesAsync();
+
+        }
+
+         public static async Task SeedData_Categoria(DataContext context)
+        {
+            if (context.Categoria.Any()) return;
+
+            var Categoria = new List<Categoria>
+                {
+
+                    new Categoria
+                    {
+                    Id = "CA01",
+                    Nombre = "Científicos.",
+                    },
+                    new Categoria
+                    {
+                    Id = "CA02",
+                    Nombre = "Literatura y lingüísticos.",
+                    },
+                    new Categoria
+                    {
+                    Id = "CA03",
+                    Nombre = "De viaje.",
+                    },
+                    new Categoria
+                    {
+                    Id = "CA04",
+                    Nombre = "Biografías.",
+                    },
+                    new Categoria
+                    {
+                    Id = "CA05",
+                    Nombre = "Libro de texto.",
+                    },
+                    new Categoria
+                    {
+                    Id = "CA06",
+                    Nombre = "Libros de gran formato",
+                    },
+                    new Categoria
+                    {
+                    Id = "CA07",
+                    Nombre = "De referencia o consulta.",
+                    },
+                    new Categoria
+                    {
+                    Id = "CA08",
+                    Nombre = "Monografías.",
+                    },
+                    new Categoria
+                    {
+                    Id = "CA09",
+                    Nombre = "Científicos.",
+                    },
+                    new Categoria
+                    {
+                    Id = "CA10",
+                    Nombre = "Literatura y lingüísticos.",
+                    },
+                    new Categoria
+                    {
+                    Id = "CA11",
+                    Nombre = "De viaje.",
+                    },
+                    new Categoria
+                    {
+                    Id = "CA12",
+                    Nombre = "Biografías.",
+                    },
+                    new Categoria
+                    {
+                    Id = "CA13",
+                    Nombre = "Libro de texto.",
+                    },
+                    new Categoria
+                    {
+                    Id = "CA14",
+                    Nombre = "Libros de gran formato",
+                    },
+                    new Categoria
+                    {
+                    Id = "CA15",
+                    Nombre = "De referencia o consulta.",
+                    },
+                    new Categoria
+                    {
+                    Id = "CA16",
+                    Nombre = "Monografías.",
+                    },
+                    new Categoria
+                    {
+                    Id = "CA17",
+                    Nombre = "Científicos.",
+                    },
+                    new Categoria
+                    {
+                    Id = "CA18",
+                    Nombre = "Literatura y lingüísticos.",
+                    },
+                    new Categoria
+                    {
+                    Id = "CA19",
+                    Nombre = "De viaje.",
+                    },
+                    new Categoria
+                    {
+                    Id = "CA20",
+                    Nombre = "Científicos.",
+                    },
+
+                    
+                };  
+                    await context.Categoria.AddRangeAsync(Categoria);
+                    await context.SaveChangesAsync();
+
+        }
+
+         public static async Task SeedData_Tipo(DataContext context)
+        {
+            if (context.Tipo.Any()) return;
+
+            var Tipo = new List<Tipo>
+            
+                {
+
+                    new Tipo
+                    {
+                    Id_Tipo = "TI01",
+                    Nombre = " Libros de consulta",
+                    },
+                    new Tipo
+                    {
+                    Id_Tipo = "TI02",
+                    Nombre = "Libros de lectura prolongada",
+                    },
+                    new Tipo
+                    {
+                    Id_Tipo = "TI03",
+                    Nombre = "Libros informativos o manuales (ensayos)",
+                    },
+                    new Tipo
+                    {
+                    Id_Tipo = "TI04",
+                    Nombre = "Literatura ilustrada",
+                    },
+                    new Tipo
+                    {
+                    Id_Tipo = "TI05",
+                    Nombre = "Biografías",
+                    },
+                    new Tipo
+                    {
+                    Id_Tipo = "TI06",
+                    Nombre = "Libros de bolsillo",
+                    },
+                    new Tipo
+                    {
+                    Id_Tipo = "TI07",
+                    Nombre = "electronico",
+                    },
+                    new Tipo
+                    {
+                    Id_Tipo = "TI08",
+                    Nombre = "Epub",
+                    },
+                    new Tipo
+                    {
+                    Id_Tipo = "TI09",
+                    Nombre = " Libros de consulta",
+                    },
+                    new Tipo
+                    {
+                    Id_Tipo = "TI10",
+                    Nombre = "Libros de lectura prolongada",
+                    },
+                    new Tipo
+                    {
+                    Id_Tipo = "TI11",
+                    Nombre = "Libros informativos o manuales (ensayos)",
+                    },
+                    new Tipo
+                    {
+                    Id_Tipo = "TI12",
+                    Nombre = "Literatura ilustrada",
+                    },
+                    new Tipo
+                    {
+                    Id_Tipo = "TI13",
+                    Nombre = "Biografías",
+                    },
+                    new Tipo
+                    {
+                    Id_Tipo = "TI14",
+                    Nombre = "Libros de bolsillo",
+                    },
+                    new Tipo
+                    {
+                    Id_Tipo = "TI15",
+                    Nombre = "electronico",
+                    },
+                    new Tipo
+                    {
+                    Id_Tipo = "TI16",
+                    Nombre = "Epub",
+                    },
+                    new Tipo
+                    {
+                    Id_Tipo = "TI17",
+                    Nombre = " Libros de consulta",
+                    },
+                    new Tipo
+                    {
+                    Id_Tipo = "TI18",
+                    Nombre = "Libros de lectura prolongada",
+                    },
+                    new Tipo
+                    {
+                    Id_Tipo = "TI19",
+                    Nombre = "Libros informativos o manuales (ensayos)",
+                    },
+                    new Tipo
+                    {
+                    Id_Tipo = "TI20",
+                    Nombre = "Literatura ilustrada",
+                    },
+
+
+
+                };  
+                    await context.Tipo.AddRangeAsync(Tipo);
+                    await context.SaveChangesAsync();
+        }
+
+         public static async Task SeedData_Libro(DataContext context)
+        {
+            if (context.Libro.Any()) return;
+
+            var Libro = new List<Libro>
+                                            {
+
+
+                            new Libro
+                            {
+                            Id_libro = "LI01",
+                            Nombre = "Arte de ver los toros, El. [Guía del espectador]",
+                            Autor = "Cruz, Rafael",
+                            Categoria = "Científicos.",
+                            tipo = " Libros de consulta",
+                            Edicion = "1999",
+                            Ubicacion = "Link",
+                            lugar = "INAP GUATEMALA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI02",
+                            Nombre = "Arte que inflama, El. La creación de una literatura bolchevique en España (1931-1936)",
+                            Autor = "López García, Ángel",
+                            Categoria = "Literatura y lingüísticos.",
+                            tipo = "Libros de lectura prolongada",
+                            Edicion = "2007",
+                            Ubicacion = "Link",
+                            lugar = "INAP COSTA RICA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI03",
+                            Nombre = "Boom de la lengua española, El. Análisis ideológico de un proceso expansivo",
+                            Autor = "Sempere y Guarinos, Juan",
+                            Categoria = "De viaje.",
+                            tipo = "Libros informativos o manuales (ensayos)",
+                            Edicion = "2007",
+                            Ubicacion = "Link",
+                            lugar = "INAP EL SALVADOR",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI04",
+                            Nombre = "Cádiz, 1812. 1. Observaciones sobre las Cortes y sobre las leyes fundamentales de España. 2. Memoria primera sobre la Constitución gótico-española",
+                            Autor = "VV.AA.",
+                            Categoria = "Biografías.",
+                            tipo = "Literatura ilustrada",
+                            Edicion = "2006",
+                            Ubicacion = "Link",
+                            lugar = "INAP ARGENTINA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI05",
+                            Nombre = "Católicos entre dos guerras. La historia religiosa de España en los años 20 y 30",
+                            Autor = "Martín Jiménez, Alfonso",
+                            Categoria = "Libro de texto.",
+                            tipo = "Biografías",
+                            Edicion = "2005",
+                            Ubicacion = "Link",
+                            lugar = "INAP MEXICO",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI06",
+                            Nombre = "Cervantes y Pasamonte. La réplica cervantina al Quijote de Avellaneda",
+                            Autor = "Caireles",
+                            Categoria = "Libros de gran formato",
+                            tipo = "Libros de bolsillo",
+                            Edicion = "2001",
+                            Ubicacion = "Link",
+                            lugar = "INAP PERU",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI07",
+                            Nombre = "Chascarrillos taurinos",
+                            Autor = "Ujaldón, Enrique",
+                            Categoria = "De referencia o consulta.",
+                            tipo = "electronico",
+                            Edicion = "2008",
+                            Ubicacion = "Link",
+                            lugar = "INAP GUATEMALA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI08",
+                            Nombre = "Constitución de la libertad en Adam Smith, La. ",
+                            Autor = "Forner, Salvador (Ed.)",
+                            Categoria = "Monografías.",
+                            tipo = "Epub",
+                            Edicion = "2007",
+                            Ubicacion = "Link",
+                            lugar = "INAP GUATEMALA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI09",
+                            Nombre = "Construcción de Europa, La. De las “guerras civiles” a la “unificación”",
+                            Autor = "Comellas García-Llera, José Luis",
+                            Categoria = "Científicos.",
+                            tipo = " Libros de consulta",
+                            Edicion = "2001",
+                            Ubicacion = "Link",
+                            lugar = "INAP COSTA RICA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI10",
+                            Nombre = "Del 98 a la Semana Trágica. Crisis de conciencia y renovación política",
+                            Autor = "Prieto, Indalecio; Cárdenas, Lázaro",
+                            Categoria = "Literatura y lingüísticos.",
+                            tipo = "Libros de lectura prolongada",
+                            Edicion = "2005",
+                            Ubicacion = "Link",
+                            lugar = "INAP EL SALVADOR",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI11",
+                            Nombre = "De la guerra civil al exilio. Los republicanos españoles y México",
+                            Autor = "Castells, Luis",
+                            Categoria = "De viaje.",
+                            tipo = "Libros informativos o manuales (ensayos)",
+                            Edicion = "2006",
+                            Ubicacion = "Link",
+                            lugar = "INAP ARGENTINA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI12",
+                            Nombre = "Del territorio a la nación. Identidades territoriales y construcción nacional",
+                            Autor = "VV.AA.",
+                            Categoria = "Biografías.",
+                            tipo = "Literatura ilustrada",
+                            Edicion = "2008",
+                            Ubicacion = "Link",
+                            lugar = "INAP MEXICO",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI13",
+                            Nombre = "Desafíos de la libertad, Los. Transformación y crisis del liberalismo en Europa y América Latina",
+                            Autor = "Díaz, Susana",
+                            Categoria = "Libro de texto.",
+                            tipo = "Biografías",
+                            Edicion = "2006",
+                            Ubicacion = "Link",
+                            lugar = "INAP PERU",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI14",
+                            Nombre = "Desorden de lo visible, El. Introducción a la poética de Jenaro Talens",
+                            Autor = "Media-Luna, Paco",
+                            Categoria = "Libros de gran formato",
+                            tipo = "Libros de bolsillo",
+                            Edicion = "2001",
+                            Ubicacion = "Link",
+                            lugar = "INAP EL SALVADOR",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI15",
+                            Nombre = "Diccionario cómico taurino. Escrito para los diestros que lo necesitan (que son muchos)",
+                            Autor = "Alía Miranda. Francisco",
+                            Categoria = "De referencia o consulta.",
+                            tipo = "electronico",
+                            Edicion = "2006",
+                            Ubicacion = "Link",
+                            lugar = "INAP ARGENTINA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI16",
+                            Nombre = "Duelo de sables. El general Aguilera, de ministro a conspirador contra Primo de Rivera (1917-1931)",
+                            Autor = "Sanz Rozalén, Vicent; Piqueras Arenas, José A.",
+                            Categoria = "Monografías.",
+                            tipo = "Epub",
+                            Edicion = "2005",
+                            Ubicacion = "Link",
+                            lugar = "INAP MEXICO",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI17",
+                            Nombre = "En el nombre del oficio. El trabajador especializado:corporativismo,adaptación y protesta",
+                            Autor = "Capellán de Miguel, Gonzalo",
+                            Categoria = "Científicos.",
+                            tipo = " Libros de consulta",
+                            Edicion = "2006",
+                            Ubicacion = "Link",
+                            lugar = "INAP GUATEMALA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI18",
+                            Nombre = "España armónica, La. El proyecto del krausismo español para una sociedad en conflicto",
+                            Autor = "Garrido Ardila, Juan Antonio",
+                            Categoria = "Literatura y lingüísticos.",
+                            tipo = "Libros de lectura prolongada",
+                            Edicion = "2007",
+                            Ubicacion = "Link",
+                            lugar = "INAP COSTA RICA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI19",
+                            Nombre = "Etnografía y politología del 98. Unamuno, Ganivet y Maeztu",
+                            Autor = "Delgado Fernández, Santiago; Sánchez Millas, Pilar",
+                            Categoria = "De viaje.",
+                            tipo = "Libros informativos o manuales (ensayos)",
+                            Edicion = "2007",
+                            Ubicacion = "Link",
+                            lugar = "INAP EL SALVADOR",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI20",
+                            Nombre = "Francisco Fernández Ordóñez. Un político para la España necesaria (1930-1992)",
+                            Autor = "Moradiellos García, Enrique",
+                            Categoria = "Científicos.",
+                            tipo = "Literatura ilustrada",
+                            Edicion = "2002",
+                            Ubicacion = "Link",
+                            lugar = "INAP ARGENTINA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI21",
+                            Nombre = "Francisco Franco: Crónica de un caudillo casi olvidado",
+                            Autor = "Renshaw, Patrick",
+                            Categoria = "Científicos.",
+                            tipo = " Libros de consulta",
+                            Edicion = "2008",
+                            Ubicacion = "Link",
+                            lugar = "INAP MEXICO",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI22",
+                            Nombre = "Franklin D. Roosevelt",
+                            Autor = "Gonzálvez, Isabel",
+                            Categoria = "Literatura y lingüísticos.",
+                            tipo = "Libros de lectura prolongada",
+                            Edicion = "2006",
+                            Ubicacion = "Link",
+                            lugar = "INAP PERU",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI23",
+                            Nombre = "Fuentes de la invención, Las. Presencia de Dante en las novelas galdosianas de la primera época",
+                            Autor = "Colaizzi, Giulia",
+                            Categoria = "De viaje.",
+                            tipo = "Libros informativos o manuales (ensayos)",
+                            Edicion = "2007",
+                            Ubicacion = "Link",
+                            lugar = "INAP GUATEMALA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI24",
+                            Nombre = "Género y representación",
+                            Autor = "Gil Pecharromán, Julio",
+                            Categoria = "Biografías.",
+                            tipo = "Literatura ilustrada",
+                            Edicion = "2002",
+                            Ubicacion = "Link",
+                            lugar = "INAP GUATEMALA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI25",
+                            Nombre = "Historia de la Segunda República española (1931-1936)",
+                            Autor = "Aguado Cabezas, Elena; Carantoña Álvarez, Francisco (Eds.)",
+                            Categoria = "Libro de texto.",
+                            tipo = "Biografías",
+                            Edicion = "2008",
+                            Ubicacion = "Link",
+                            lugar = "INAP COSTA RICA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI26",
+                            Nombre = "Ideas reformistas y reformadores en la España del siglo XIX",
+                            Autor = "Juan Sempere y Guarinos",
+                            Categoria = "Libros de gran formato",
+                            tipo = "Libros de bolsillo",
+                            Edicion = "2007",
+                            Ubicacion = "Link",
+                            lugar = "INAP EL SALVADOR",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI27",
+                            Nombre = "Indecisiones del primer liberalismo español, Las",
+                            Autor = "Edwards, John",
+                            Categoria = "De referencia o consulta.",
+                            tipo = "electronico",
+                            Edicion = "2007",
+                            Ubicacion = "Link",
+                            lugar = "INAP ARGENTINA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI28",
+                            Nombre = "Isabel y Fernando. Constructores de un régimen",
+                            Autor = "Hidalgo Huerta, Manuel",
+                            Categoria = "Monografías.",
+                            tipo = "Epub",
+                            Edicion = "2004",
+                            Ubicacion = "Link",
+                            lugar = "INAP MEXICO",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI29",
+                            Nombre = "Juan Pablo II. Un hombre extraordinario",
+                            Autor = "Hamnett, Brian",
+                            Categoria = "Científicos.",
+                            tipo = " Libros de consulta",
+                            Edicion = "2006",
+                            Ubicacion = "Link",
+                            lugar = "INAP PERU",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI30",
+                            Nombre = "Juárez. El benemérito de las Américas",
+                            Autor = "Marcos Villalón, Emilio",
+                            Categoria = "Literatura y lingüísticos.",
+                            tipo = "Libros de lectura prolongada",
+                            Edicion = "2004",
+                            Ubicacion = "Link",
+                            lugar = "INAP EL SALVADOR",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI31",
+                            Nombre = "Luis Bagaría entre el arte y la política",
+                            Autor = "Cerezo Galán, Pedro",
+                            Categoria = "De viaje.",
+                            tipo = "Libros informativos o manuales (ensayos)",
+                            Edicion = "2003",
+                            Ubicacion = "Link",
+                            lugar = "INAP ARGENTINA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI32",
+                            Nombre = "Mal del siglo, El. El conflicto entre Ilustración y Romanticismo en la crisis finisecular del siglo XIX",
+                            Autor = "Egido León, Ángeles, et.al.",
+                            Categoria = "Biografías.",
+                            tipo = " Libros de consulta",
+                            Edicion = "2006",
+                            Ubicacion = "Link",
+                            lugar = "INAP MEXICO",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI33",
+                            Nombre = "Memoria de la Segunda República. Mito y realidad",
+                            Autor = "García, Hugo",
+                            Categoria = "Libro de texto.",
+                            tipo = "Libros de lectura prolongada",
+                            Edicion = "2008",
+                            Ubicacion = "Link",
+                            lugar = "INAP MEXICO",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI34",
+                            Nombre = "Mentiras necesarias. La batalla por la opinión británica durante la Guerra Civil",
+                            Autor = "Gómez-Ferrer, Guadalupe; Sánchez, Raquel (eds.)",
+                            Categoria = "Libros de gran formato",
+                            tipo = "Libros informativos o manuales (ensayos)",
+                            Edicion = "2007",
+                            Ubicacion = "Link",
+                            lugar = "INAP PERU",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI35",
+                            Nombre = "Modernizar España. Proyectos de reforma y apertura internacional [1898-1914]",
+                            Autor = "Azcona Pastor, José Manuel; Gortari Unanua, Joaquín",
+                            Categoria = "De referencia o consulta.",
+                            tipo = "Literatura ilustrada",
+                            Edicion = "2001",
+                            Ubicacion = "Link",
+                            lugar = "INAP GUATEMALA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI36",
+                            Nombre = "Navarra y el nacionalismo vasco. Ensayo historicopolítico sobre las señas de identidad originaria del Viejo Reino",
+                            Autor = "Vivar, Francisco",
+                            Categoria = "Monografías.",
+                            tipo = "Biografías",
+                            Edicion = "2004",
+                            Ubicacion = "Link",
+                            lugar = "INAP GUATEMALA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI37",
+                            Nombre = "Numancia de Cervantes y la memoria de un mito, La",
+                            Autor = "Alberca, Manuel",
+                            Categoria = "Científicos.",
+                            tipo = "Libros de bolsillo",
+                            Edicion = "2007",
+                            Ubicacion = "Link",
+                            lugar = "INAP COSTA RICA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI38",
+                            Nombre = "Pacto ambiguo, El. De la novela autobiográfica a la autoficción",
+                            Autor = "Lagi, Sara",
+                            Categoria = "Literatura y lingüísticos.",
+                            tipo = "electronico",
+                            Edicion = "2007",
+                            Ubicacion = "Link",
+                            lugar = "INAP MEXICO",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI39",
+                            Nombre = "Pensamiento político de Hans Kelsen (1911-1920), El. Los orígenes de de la esencia y el valor de la democracia",
+                            Autor = "Encinar Félix, Ángeles",
+                            Categoria = "De viaje.",
+                            tipo = "Epub",
+                            Edicion = "2005",
+                            Ubicacion = "Link",
+                            lugar = "INAP PERU",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI40",
+                            Nombre = "Pluralidad narrativa, La. Escritores españoles contemporáneos 1984-2004",
+                            Autor = "Villacañas, José Luis",
+                            Categoria = "Científicos.",
+                            tipo = " Libros de consulta",
+                            Edicion = "2008",
+                            Ubicacion = "Link",
+                            lugar = "INAP GUATEMALA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI41",
+                            Nombre = "Poder y conflicto. Ensayos sobre Carl Schmitt",
+                            Autor = "García Jambrina, Luis; Gómez Blesa, Mercedes (eds.)",
+                            Categoria = "Científicos.",
+                            tipo = "Libros de lectura prolongada",
+                            Edicion = "2005",
+                            Ubicacion = "Link",
+                            lugar = "INAP GUATEMALA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI42",
+                            Nombre = "Poesía amorosa de José Luis Tejada, La",
+                            Autor = "Martínez López, Francisco; Muñoz Muñoz, Francisco A. (eds.)",
+                            Categoria = "Literatura y lingüísticos.",
+                            tipo = "Libros informativos o manuales (ensayos)",
+                            Edicion = "2007",
+                            Ubicacion = "Link",
+                            lugar = "INAP COSTA RICA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI43",
+                            Nombre = "Políticas de paz en el Mediterráneo",
+                            Autor = "Rudan, Paola",
+                            Categoria = "De viaje.",
+                            tipo = " Libros de consulta",
+                            Edicion = "2007",
+                            Ubicacion = "Link",
+                            lugar = "INAP ARGENTINA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI44",
+                            Nombre = "Por la senda de Occidente. Republicanismo y constitución en el pensamiento político de Simón Bolívar",
+                            Autor = "de la Fuente, Gregorio: Serrano García, Rafael",
+                            Categoria = "Biografías.",
+                            tipo = "Libros de lectura prolongada",
+                            Edicion = "2005",
+                            Ubicacion = "Link",
+                            lugar = "INAP MEXICO",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI45",
+                            Nombre = "Revolución gloriosa, La. Un ensayo de regeneración nacional (1868-1874). Antología de textos",
+                            Autor = "de la Cueva, Julio; Montero, Feliciano",
+                            Categoria = "Libro de texto.",
+                            tipo = "Libros informativos o manuales (ensayos)",
+                            Edicion = "2007",
+                            Ubicacion = "Link",
+                            lugar = "INAP PERU",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI46",
+                            Nombre = "Secularización conflictiva, La. España (1898-1931)",
+                            Autor = "Bard, Christine; Maugue Annelise; Perrot Midhelle, et.al.",
+                            Categoria = "Libros de gran formato",
+                            tipo = "Literatura ilustrada",
+                            Edicion = "2000",
+                            Ubicacion = "Link",
+                            lugar = "INAP GUATEMALA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI47",
+                            Nombre = "Siglo de antifeminismo, Un. El largo camino de la emancipación de la mujer",
+                            Autor = "Cobaleda, Mariate",
+                            Categoria = "De referencia o consulta.",
+                            tipo = "Biografías",
+                            Edicion = "2002",
+                            Ubicacion = "Link",
+                            lugar = "INAP GUATEMALA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI48",
+                            Nombre = "Simbolismo del toro, El",
+                            Autor = "Suárez Cortina, Manuel",
+                            Categoria = "Monografías.",
+                            tipo = "Libros de bolsillo",
+                            Edicion = "2006",
+                            Ubicacion = "Link",
+                            lugar = "INAP COSTA RICA",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI49",
+                            Nombre = "Sombra del pasado, La. Novela e historia en Galdós, Unamuno y Valle-Inclán",
+                            Autor = "Urrutia, Jorge",
+                            Categoria = "Científicos.",
+                            tipo = " Libros de consulta",
+                            Edicion = "2007",
+                            Ubicacion = "Link",
+                            lugar = "INAP EL SALVADOR",
+                            },
+                            new Libro
+                            {
+                            Id_libro = "LI50",
+                            Nombre = "Teatro como sistema, El",
+                            Autor = "Salvador y Rodrigáñez, Amós",
+                            Categoria = "Literatura y lingüísticos.",
+                            tipo = "Libros de lectura prolongada",
+                            Edicion = "2000",
+                            Ubicacion = "Link",
+                            lugar = "INAP ARGENTINA",
+                            },
+
+
+
+
+
+                                            };  
+                    await context.Libro.AddRangeAsync(Libro);
+                    await context.SaveChangesAsync();
+        }
+        
+
+    }
+} 
+      
+        
+    

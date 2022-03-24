@@ -1,0 +1,12 @@
+/Users/omarrodriguez/empleados/Domain/bin/Debug/net5.0/Domain.deps.json
+/Users/omarrodriguez/empleados/Domain/bin/Debug/net5.0/Domain.dll
+/Users/omarrodriguez/empleados/Domain/bin/Debug/net5.0/ref/Domain.dll
+/Users/omarrodriguez/empleados/Domain/bin/Debug/net5.0/Domain.pdb
+/Users/omarrodriguez/empleados/Domain/obj/Debug/net5.0/Domain.csproj.AssemblyReference.cache
+/Users/omarrodriguez/empleados/Domain/obj/Debug/net5.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/omarrodriguez/empleados/Domain/obj/Debug/net5.0/Domain.AssemblyInfoInputs.cache
+/Users/omarrodriguez/empleados/Domain/obj/Debug/net5.0/Domain.AssemblyInfo.cs
+/Users/omarrodriguez/empleados/Domain/obj/Debug/net5.0/Domain.csproj.CoreCompileInputs.cache
+/Users/omarrodriguez/empleados/Domain/obj/Debug/net5.0/Domain.dll
+/Users/omarrodriguez/empleados/Domain/obj/Debug/net5.0/ref/Domain.dll
+/Users/omarrodriguez/empleados/Domain/obj/Debug/net5.0/Domain.pdb

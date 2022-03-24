@@ -1,0 +1,15 @@
+/Users/omarrodriguez/empleados/Persistence/bin/Debug/net5.0/Persistence.deps.json
+/Users/omarrodriguez/empleados/Persistence/bin/Debug/net5.0/Persistence.dll
+/Users/omarrodriguez/empleados/Persistence/bin/Debug/net5.0/ref/Persistence.dll
+/Users/omarrodriguez/empleados/Persistence/bin/Debug/net5.0/Persistence.pdb
+/Users/omarrodriguez/empleados/Persistence/bin/Debug/net5.0/Domain.dll
+/Users/omarrodriguez/empleados/Persistence/bin/Debug/net5.0/Domain.pdb
+/Users/omarrodriguez/empleados/Persistence/obj/Debug/net5.0/Persistence.csproj.AssemblyReference.cache
+/Users/omarrodriguez/empleados/Persistence/obj/Debug/net5.0/Persistence.GeneratedMSBuildEditorConfig.editorconfig
+/Users/omarrodriguez/empleados/Persistence/obj/Debug/net5.0/Persistence.AssemblyInfoInputs.cache
+/Users/omarrodriguez/empleados/Persistence/obj/Debug/net5.0/Persistence.AssemblyInfo.cs
+/Users/omarrodriguez/empleados/Persistence/obj/Debug/net5.0/Persistence.csproj.CoreCompileInputs.cache
+/Users/omarrodriguez/empleados/Persistence/obj/Debug/net5.0/Persistence.csproj.CopyComplete
+/Users/omarrodriguez/empleados/Persistence/obj/Debug/net5.0/Persistence.dll
+/Users/omarrodriguez/empleados/Persistence/obj/Debug/net5.0/ref/Persistence.dll
+/Users/omarrodriguez/empleados/Persistence/obj/Debug/net5.0/Persistence.pdb
